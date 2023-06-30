@@ -1,1 +1,25 @@
 <div>курсы</div>
+{{#if courses.length }}
+{{#each courses}}
+<div class="row">
+  <div class="col s6 m7">
+    <div class="card">
+      <div class="card-image">
+        <img src='{{img}}' alt='{{title}}'>
+        <div class="card-title">{{title}}</div>
+        <div class="price">{{price}}</div>
+      </div>
+      <div class="card-content">
+        <p></p>
+      </div>
+      <div class="card-action">
+        <a href="/courses/{{id}}">Открыть курс</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+{{else}}
+<p>Нет курсов</p>
+{{/if}}

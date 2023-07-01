@@ -1,0 +1,13 @@
+<h1>Ваши курсы</h1>
+{{#if card.length }}
+
+{{#each card}}
+<div>Курс: {{title}}, Цена: {{price}}, Количество: {{count}}</div>
+<button class='btn btn-primary'>удалить 1 курс</button>
+{{/each}}
+
+<div>Общая стоимость курсов: {{price}}</div>
+{{else}}
+
+<div>Вы не купили ни одного курса.</div>
+{{/if}}

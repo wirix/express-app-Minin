@@ -1,12 +1,15 @@
 <h1>Ваши курсы</h1>
 {{#if card.length }}
+<div id='card' class='row'>
+  <div class='body'>
+    {{#each card}}
+    <div>Курс: {{title}}, Цена: {{price}}, Количество: {{count}}</div>
+    <button class='btn btn-primary js-remove' data-id="{{id}}">удалить 1 курс</button>
+  </div>
+  {{/each}}
+  <div class='price'>Общая стоимость курсов: {{price}}</div>
+</div>
 
-{{#each card}}
-<div>Курс: {{title}}, Цена: {{price}}, Количество: {{count}}</div>
-<button class='btn btn-primary'>удалить 1 курс</button>
-{{/each}}
-
-<div>Общая стоимость курсов: {{price}}</div>
 {{else}}
 
 <div>Вы не купили ни одного курса.</div>

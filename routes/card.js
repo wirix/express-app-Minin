@@ -20,5 +20,11 @@ router.post('/add', async (req, res) => {
   res.redirect('/card')
 })
 
+router.delete('/remote/:id', async (req, res) => {
+  const card = await Card.remove(req.params.id)
+  // чтобы подтвердить, что все прошло успешно для delete 
+  res.status(200).json(card)
+})
+
 
 module.exports = router
